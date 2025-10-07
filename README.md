@@ -52,12 +52,6 @@ def simulate_policy(model, data, changes):
         scenario_data[feature] *= (1 + adjustment/100)
     return model.predict(scenario_data).mean()
 
-# 跨境流量增加20%的效果
-policy_effect = simulate_policy(model, X, {'跨境汽车流量_车次': 20})
-
-
-
-
 ## 运行环境
 
 建议使用Python 3.8及以上版本。安装依赖：
